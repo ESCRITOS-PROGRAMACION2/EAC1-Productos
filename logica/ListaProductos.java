@@ -28,6 +28,22 @@ public class ListaProductos {
 					
 	
 	}
+	
+public boolean estaProducto(int codigo) {
+		
+		int x=0;
+		boolean encontre=false;
+		do{
+			if(lista.get(x).getCodigo()==codigo) {
+				encontre=true;
+			 }else
+				x++;
+		 }while( x<lista.size()&&!encontre);
+		return encontre;			
+	
+	}
+	
+	
 	//devuelve el producto que está en la posición i
 	public Producto devolver(int i) {
 		
@@ -52,3 +68,4 @@ public class ListaProductos {
         }
     }
 }
+
